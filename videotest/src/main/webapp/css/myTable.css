@@ -1,0 +1,37 @@
+#page-wrap {
+	margin-left: 50px;
+	margin-right: 50px;
+}
+
+
+body{
+margin:0;
+padding:0;
+line-height: 1.5em;
+}
+
+
+b{font-size: 110%;}
+em{color: red;}
+
+.nav a:link, .nav a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+a:link, a:visited {
+    color: blue;
+}
+
+a:hover {
+    color: red;
+}
+
+/*end of navigation bar*/
+
+/*table style*/
+.myTable { background-color:#FFFFE0;border-collapse:collapse; margin: 0px auto;}
+.myTable th { background-color:#BDB76B;color:white; }
+.myTable td, .myTable th { text-align:center; padding:10px 10px;border:1px solid #BDB76B; }
+/*end of table style*/
+

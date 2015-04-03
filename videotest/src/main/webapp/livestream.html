@@ -1,0 +1,26 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var ws = new WebSocket("ws://192.168.43.153:8080/videotest/livevideo2");
+		ws.onmessage = function(msg) {
+			var target = document.getElementById("target");
+			url = window.webkitURL.createObjectURL(msg.data);
+			target.onload = function() {
+				window.webkitURL.revokeObjectURL(url);
+			};
+			target.src = url;
+		}
+	</script>
+	<div style="visibility: hidden; width: 0; height: 0;">
+		<canvas width="320" id="canvas" height="240"></canvas>
+	</div>
+
+	<div>
+		<img id="target" style="display: inline;" />
+	</div>
+</body>
+</html>
